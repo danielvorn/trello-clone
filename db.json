@@ -7,28 +7,28 @@
   ],
   "cards": [
     {
-      "title": "card-1",
-      "id": "Talk an afternoon walk"
+      "id": "card-1",
+      "title": "Talk an afternoon walk"
     },
     {
-      "title": "card-2",
-      "id": "Attend Sideqik interview"
+      "id": "card-2",
+      "title": "Attend Sideqik interview"
     },
     {
-      "title": "card-3",
-      "id": "Drink some wine"
+      "id": "card-3",
+      "title": "Go to the gym"
     },
     {
-      "title": "card-4",
-      "id": "Eat some Hot Cheetohs"
+      "id": "card-4",
+      "title": "Eat some Hot Cheetohs"
     },
     {
-      "title": "card-5",
-      "id": "Go hiking"
+      "id": "card-5",
+      "title": "Go hiking"
     },
     {
-      "title": "card-6",
-      "id": "Study algorithms"
+      "id": "card-6",
+      "title": "Study algorithms"
     }
   ],
   "columns": [
@@ -36,15 +36,13 @@
       "id": "column-1",
       "title": "Todo",
       "cardIds": [
-        "card-1",
-        "card-2"
+        "card-1"
       ]
     },
     {
       "id": "column-2",
       "title": "In progress",
       "cardIds": [
-        "card-2",
         "card-2"
       ]
     },
@@ -52,15 +50,16 @@
       "id": "column-3",
       "title": "Review",
       "cardIds": [
-        "card-2"
+        "card-3",
+        "card-4"
       ]
     },
     {
       "id": "column-4",
       "title": "Completed",
       "cardIds": [
-        "card-2",
-        "card-2"
+        "card-5",
+        "card-6"
       ]
     }
   ]
