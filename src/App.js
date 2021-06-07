@@ -34,8 +34,6 @@ const App = () => {
   }
 
   useEffect(() => {
-    console.log("creatingColumn")
-    console.log(creatingColumn)
     fetchCards()
     fetchColumns()
     fetchColumnOrder()
