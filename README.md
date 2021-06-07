@@ -1,7 +1,5 @@
 # Trello Clone
 
-In the project directory, you can run:
-
 ### `yarn mock-api`
 
 Starts a mock REST API on port 3000 with the following resources:
