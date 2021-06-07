@@ -7,68 +7,28 @@
   ],
   "cards": [
     {
-      "title": "card-6",
+      "title": "card-1",
       "id": "Talk an afternoon walk"
     },
     {
-      "title": "wegweweg",
-      "id": "3gKJofE"
+      "title": "card-2",
+      "id": "Attend Sideqik interview"
     },
     {
-      "title": "ewwh",
-      "id": "xkT9jFP"
+      "title": "card-3",
+      "id": "Drink some wine"
     },
     {
-      "title": "wwegwg",
-      "id": "24MjXW_"
+      "title": "card-4",
+      "id": "Eat some Hot Cheetohs"
     },
     {
-      "title": "ewwtwet",
-      "id": "V1u02Zo"
+      "title": "card-5",
+      "id": "Go hiking"
     },
     {
-      "title": "wegwgweg",
-      "id": "A5_xNzL"
-    },
-    {
-      "title": "wewgweg",
-      "id": "ipB6HHz"
-    },
-    {
-      "title": "ewgwfwg",
-      "id": "8qKSDHV"
-    },
-    {
-      "title": "efwwwhwhe",
-      "id": "TOMUB4i",
-      "status": "DONE"
-    },
-    {
-      "title": "NOPE",
-      "id": "IYTML97",
-      "status": "DONE"
-    },
-    {
-      "title": "fewgwgweg",
-      "id": "iDZlxWL"
-    },
-    {
-      "title": "ewgwgewhw",
-      "id": "33aG70B"
-    },
-    {
-      "title": "kljkljl",
-      "id": "Ci7W8c-",
-      "status": "DONE"
-    },
-    {
-      "title": "fwewehwe",
-      "id": "bp1pJwF",
-      "status": "DONE"
-    },
-    {
-      "title": "kllknk",
-      "id": "QZTObLR"
+      "title": "card-6",
+      "id": "Study algorithms"
     }
   ],
   "columns": [
@@ -76,31 +36,31 @@
       "id": "column-1",
       "title": "Todo",
       "cardIds": [
-        "bp1pJwF",
-        "Ci7W8c-"
+        "card-1",
+        "card-2"
       ]
     },
     {
       "id": "column-2",
       "title": "In progress",
       "cardIds": [
-        "IYTML97"
+        "card-2",
+        "card-2"
       ]
     },
     {
       "id": "column-3",
       "title": "Review",
       "cardIds": [
-        "iDZlxWL",
-        "QZTObLR"
+        "card-2"
       ]
     },
     {
       "id": "column-4",
       "title": "Completed",
       "cardIds": [
-        "TOMUB4i",
-        "33aG70B"
+        "card-2",
+        "card-2"
       ]
     }
   ]
