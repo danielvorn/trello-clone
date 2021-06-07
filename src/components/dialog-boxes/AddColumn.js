@@ -33,7 +33,7 @@ export default function AddColumn({setCreatingColumn}) {
     return (
         <div className="icon">
             <button onClick={handleClickOpen} className="addColButton">
-                <div style={{display: "flex", alignItems: "center"}}><AddIcon fontSize="medium"/> Add column</div>
+                <div style={{display: "flex", alignItems: "center"}}><AddIcon/> Add column</div>
             </button>
             <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
                 <DialogTitle id="form-dialog-title">Enter column title</DialogTitle>
