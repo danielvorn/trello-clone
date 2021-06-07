@@ -22,6 +22,9 @@ export const getColumns = () =>
 export const getColumnOrder = () =>
     axios.get("/columnOrder").then(checkStatus)
 
+export const setColumnOrder = (order) =>
+    axios.patch("/columnOrder/order", {column: order}).then(checkStatus)
+
 export const getCards = () =>
     axios.get("/cards").then(checkStatus)
 

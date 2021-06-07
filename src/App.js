@@ -26,7 +26,9 @@ const App = () => {
   }
   const fetchColumnOrder = () => {
     client.getColumnOrder()
-        .then(res => setColumnOrder(res.data))
+        .then(res => {
+          setColumnOrder(res.data[0]["column"])
+        })
         .catch(err => console.log(err))
   }
 
@@ -54,6 +56,7 @@ const App = () => {
       const newColumnOrder = [...columnOrder]
       newColumnOrder.splice(source.index, 1);
       newColumnOrder.splice(destination.index, 0, draggableId);
+      client.setColumnOrder(newColumnOrder).catch(err => console.log(err))
       setColumnOrder(newColumnOrder)
       return;
     }
@@ -71,7 +74,7 @@ const App = () => {
       let newColumn = [...columns]
       const index = newColumn.findIndex(x => x.id === start.id)
       newColumn[index].cardIds = newCardIds
-      client.pushCardMappingsToColumn(columns[index].id, newCardIds)
+      client.pushCardMappingsToColumn(columns[index].id, newCardIds).catch(err => console.log(err))
       setColumns(newColumn)
       return;
     }
