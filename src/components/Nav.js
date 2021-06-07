@@ -1,6 +1,7 @@
-import React from 'react';
+import React from "react";
 import Logo from "../assets/trello-logo.gif";
-import '../styles/Nav.css'
+import "../styles/Nav.css";
+
 function Nav() {
     return (
         <div className="nav">

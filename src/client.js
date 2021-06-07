@@ -1,4 +1,4 @@
-import axios from './axios';
+import axios from "./axios";
 
 const checkStatus = response => {
     console.log(response)
@@ -12,19 +12,19 @@ const checkStatus = response => {
 }
 
 export const getColumnById = (id) =>
-    axios.get('/columns/' + id).then(checkStatus)
+    axios.get("/columns/" + id).then(checkStatus)
 
 export const pushCardMappingsToColumn = (colId, cardIds) =>
-    axios.patch('/columns/' + colId, {cardIds: cardIds}).then(checkStatus)
+    axios.patch("/columns/" + colId, {cardIds: cardIds}).then(checkStatus)
 
 export const getColumns = () =>
-    axios.get('/columns').then(checkStatus)
+    axios.get("/columns").then(checkStatus)
 
 export const getColumnOrder = () =>
-    axios.get('/columnOrder').then(checkStatus)
+    axios.get("/columnOrder").then(checkStatus)
 
 export const getCards = () =>
-    axios.get('/cards').then(checkStatus)
+    axios.get("/cards").then(checkStatus)
 
 const createCardColumnMappings = (cardId, colId) =>
     getColumnById(colId)
@@ -37,7 +37,7 @@ const createCardColumnMappings = (cardId, colId) =>
         })
 
 export const createCard = (cardTitle, colId) =>
-    axios.post('/cards', {title: cardTitle})
+    axios.post("/cards", {title: cardTitle})
         .then(checkStatus)
         .then(res => createCardColumnMappings(res.data.id, colId))
         .then(cardColumnMappings => pushCardMappingsToColumn(colId, cardColumnMappings))
@@ -49,12 +49,12 @@ export const deleteCard = (colId, cardId) =>
         .then(res => {
             let difference = res.filter(x => !cardId.includes(x))
             pushCardMappingsToColumn(colId, difference)
-            axios.delete('/cards/' + cardId)
+            axios.delete("/cards/" + cardId)
         })
 
 export const editCardContent = (cardId, cardTitle) =>
-    axios.patch('/cards/' + cardId, {title: cardTitle}).then(checkStatus)
+    axios.patch("/cards/" + cardId, {title: cardTitle}).then(checkStatus)
 
 export const markCardAsDone = (cardId) =>
-    axios.patch('/cards/' + cardId, {status: "DONE"}).then(checkStatus)
+    axios.patch("/cards/" + cardId, {status: "DONE"}).then(checkStatus)
 

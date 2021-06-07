@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from 'react'
-import Column from './Component/Column'
-import * as client from './client'
-import {DragDropContext, Droppable} from 'react-beautiful-dnd'
-import './App.css';
-import Nav from "./Component/Nav";
+import React, {useEffect, useState} from "react"
+import Column from "./components/Column"
+import * as client from "./client"
+import {DragDropContext, Droppable} from "react-beautiful-dnd"
+import "./App.css";
+import Nav from "./components/Nav";
 
 const App = () => {
 
@@ -50,8 +50,8 @@ const App = () => {
       return
     }
 
-    //If you're dragging columns
-    if (type === 'column') {
+    //If you"re dragging columns
+    if (type === "column") {
       const newColumnOrder = [...columnOrder]
       newColumnOrder.splice(source.index, 1);
       newColumnOrder.splice(destination.index, 0, draggableId);
@@ -59,7 +59,7 @@ const App = () => {
       return;
     }
 
-    //Anything below this happens if you're dragging cards
+    //Anything below this happens if you"re dragging cards
     const [start] = columns.filter(column => column.id === source.droppableId)
     const [finish] = columns.filter(column => column.id === destination.droppableId)
 
@@ -112,7 +112,7 @@ const App = () => {
       <DragDropContext onDragEnd={onDragEnd}>
         <Nav/>
         <div className="board">
-          <Droppable droppableId='all-columns' direction='horizontal' type='column'>
+          <Droppable droppableId="all-columns" direction="horizontal" type="column">
             {(provided) => (
                 <div className="app-container"
                      {...provided.droppableProps}

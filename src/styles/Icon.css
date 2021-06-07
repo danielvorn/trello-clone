@@ -1,0 +1,27 @@
+.icon {
+    cursor: pointer;
+    margin-left: 8px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+textarea {
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+}
+
+.dialogActions {
+    display: flex;
+    align-items: center;
+    padding: 0 12px 12px 0;
+}
+
+.clearIcon {
+    color: red;
+    cursor: pointer;
+}
+
+.checkIcon {
+    color: green;
+    cursor: pointer;
+}

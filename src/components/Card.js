@@ -1,9 +1,9 @@
-import React, {useEffect} from 'react'
-import '../styles/Card.css'
-import {Draggable} from 'react-beautiful-dnd'
+import React from "react"
+import "../styles/Card.css"
+import {Draggable} from "react-beautiful-dnd"
 import EditDialogForm from "./dialog-boxes/EditDialogForm";
 import ConfirmDoneDialog from "./dialog-boxes/ConfirmDoneDialog";
-import CheckCircleIcon from '@material-ui/icons/CheckCircle';
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import ConfirmDeleteDialog from "./dialog-boxes/ConfirmDeleteDialog";
 
 function Card(props) {

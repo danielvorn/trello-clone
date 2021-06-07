@@ -1,11 +1,11 @@
-import React, {useEffect, useRef, useState} from 'react'
-import Card from './Card'
-import {Draggable, Droppable} from 'react-beautiful-dnd'
-import '../styles/Column.css'
-import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
-import AddButton from "./AddButton";
-import ClearIcon from '@material-ui/icons/Clear';
-import * as client from '../client';
+import React, {useEffect, useRef, useState} from "react"
+import Card from "./Card"
+import {Draggable, Droppable} from "react-beautiful-dnd"
+import "../styles/Column.css"
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import ClearIcon from "@material-ui/icons/Clear";
+import * as client from "../client";
+import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
 
 function Column(props) {
     const [show, setShow] = useState(true);
@@ -31,7 +31,7 @@ function Column(props) {
                             <div className="title">{props.column.title}</div>
                             <MoreHorizIcon fontSize="small"/>
                         </div>
-                        <Droppable droppableId={props.column.id} type='card'>
+                        <Droppable droppableId={props.column.id} type="card">
                             {(provided, snapshot) => (
                                 <div className="cardList"
                                      ref={provided.innerRef}
@@ -49,7 +49,12 @@ function Column(props) {
                                 </div>
                             )}
                         </Droppable>
-                        {show ? <AddButton element="card" setShow={setShow}/> :
+                        {show ?
+                            <div className="button-frame" onClick={() => setShow(false)}>
+                                <AddOutlinedIcon/>
+                                <p>Add a card</p>
+                            </div>
+                            :
                             <div className="text-area-container">
                                 <textarea
                                     autoFocus

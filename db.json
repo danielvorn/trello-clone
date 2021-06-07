@@ -53,17 +53,13 @@
       "status": "DONE"
     },
     {
-      "title": "YEP",
+      "title": "NOPE",
       "id": "SdpNLjt",
       "status": "DONE"
     },
     {
       "title": "fewgwgweg",
       "id": "iDZlxWL"
-    },
-    {
-      "title": "ewgwgwg",
-      "id": "iCPjc7F"
     },
     {
       "title": "ewgwgewhw",
@@ -73,6 +69,10 @@
       "title": "fewgwg",
       "id": "Ci7W8c-",
       "status": "DONE"
+    },
+    {
+      "title": "fwewehwe",
+      "id": "bp1pJwF"
     }
   ],
   "columns": [
@@ -87,16 +87,16 @@
       "id": "column-2",
       "title": "In progress",
       "cardIds": [
-        "Ci7W8c-",
-        "IYTML97",
-        "SdpNLjt"
+        "SdpNLjt",
+        "bp1pJwF",
+        "Ci7W8c-"
       ]
     },
     {
       "id": "column-3",
       "title": "Review",
       "cardIds": [
-        "iCPjc7F"
+        "IYTML97"
       ]
     },
     {
