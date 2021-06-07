@@ -1,11 +1,11 @@
 import React, {useEffect, useRef, useState} from "react"
-import Card from "./Card"
 import {Draggable, Droppable} from "react-beautiful-dnd"
-import "../styles/Column.css"
+import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ClearIcon from "@material-ui/icons/Clear";
 import * as client from "../client";
-import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
+import "../styles/Column.css"
+import Card from "./Card"
 
 function Column(props) {
     const [show, setShow] = useState(true);
