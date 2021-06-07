@@ -34,9 +34,11 @@ const App = () => {
   }
 
   useEffect(() => {
+    console.log("creatingColumn")
+    console.log(creatingColumn)
     fetchCards()
-    fetchColumnOrder()
     fetchColumns()
+    fetchColumnOrder()
   }, [deleting,
     cardSubmitting,
     editSubmitting,

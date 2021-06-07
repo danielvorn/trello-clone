@@ -13,8 +13,9 @@ export default function AddColumn({setCreatingColumn}) {
     const [title, setTitle] = useState("");
 
     const createColumn = async () => {
+        setCreatingColumn(true)
         client.createColumn(title)
-            .then(setCreatingColumn)
+            .then(res => setCreatingColumn(false))
     }
 
     const handleClickOpen = () => {
