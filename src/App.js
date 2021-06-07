@@ -6,7 +6,6 @@ import * as client from "./client"
 import "./App.css";
 
 const App = () => {
-
   const [cards, setCards] = useState([])
   const [columns, setColumns] = useState([])
   const [columnOrder, setColumnOrder] = useState([])

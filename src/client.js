@@ -1,7 +1,6 @@
 import axios from "./axios";
 
 const checkStatus = response => {
-    console.log(response)
     if (response.statusText === "OK" || response.statusText === "Created") {
         return response
     }
