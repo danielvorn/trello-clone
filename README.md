@@ -1,6 +1,6 @@
 # Trello Clone
 
-This is a front-end Trello clone built in React that makes requests against a fake REST api. First, clone the project and install dependencies with `yarn install`. Then run `yarn mock-api` to start a fake REST api at `localhost:3000`. Now run `yarn start` to start your front-end application at `localhost:8000`
+This is a front-end Trello clone built in React that makes requests against a fake REST API. First, clone the project and install dependencies with `yarn install`. Then run `yarn mock-api` to start a fake REST API at `localhost:3000`. Now run `yarn start` to start your front-end application at `localhost:8000`
 
 ## Commands
 
