@@ -1,0 +1,63 @@
+{
+  "columnOrder": [
+    "column-1",
+    "column-2",
+    "column-3",
+    "column-4"
+  ],
+  "cards": [
+    {
+      "id": "card-1",
+      "title": "Drink water"
+    },
+    {
+      "id": "card-2",
+      "title": "Attend Sideqik interview"
+    },
+    {
+      "id": "card-3",
+      "title": "Eat some Hot Cheetohs"
+    },
+    {
+      "id": "card-4",
+      "title": "Study JavaScript"
+    },
+    {
+      "id": "card-5",
+      "title": "Go grocery shopping"
+    },
+    {
+      "title": "card-6",
+      "id": "Talk an afternoon walk"
+    }
+  ],
+  "columns": [
+    {
+      "id": "column-1",
+      "title": "Todo",
+      "cardIds": ["card-5"]
+    },
+    {
+      "id": "column-2",
+      "title": "In progress",
+      "cardIds": [
+        "card-2"
+      ]
+    },
+    {
+      "id": "column-3",
+      "title": "Review",
+      "cardIds": [
+        "card-3",
+        "card-1"
+      ]
+    },
+    {
+      "id": "column-4",
+      "title": "Completed",
+      "cardIds": [
+        "card-4"
+      ]
+    }
+  ]
+}
