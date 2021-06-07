@@ -2,7 +2,7 @@
 
 ### `yarn mock-api`
 
-Starts a mock REST API on port 3000 with the following resources:
+Starts a fake REST API on port 3000 with the following resources:
 
 http://localhost:3000/columnOrder
 

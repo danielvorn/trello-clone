@@ -126,7 +126,7 @@ const App = () => {
                      ref={provided.innerRef}>
                   {columnOrder.map((id, index) => {
                     const [column] = columns.filter(x => x.id === id)
-                    const myCards = column.cardIds
+                    const myCards = column?.cardIds
                         .map(cardId => {
                           const [card] = cards.filter(card => card.id === cardId)
                           return card

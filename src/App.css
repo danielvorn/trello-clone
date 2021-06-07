@@ -1,5 +1,6 @@
 .app-container {
     display: flex;
+    overflow-y: scroll;
 }
 
 .spinner {
