@@ -2,7 +2,6 @@
 
 #ide artifacts
 .idea/
-/yarn.lock
 
 # dependencies
 /node_modules
