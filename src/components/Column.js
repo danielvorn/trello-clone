@@ -23,21 +23,21 @@ function Column(props) {
     })
 
     return (
-        <Draggable draggableId={props.column.id} index={props.index}>
+        <Draggable draggableId={props.column?.id} index={props.index}>
             {(provided) => (
                 <div className="column-container" ref={provided.innerRef} {...provided.draggableProps}>
                     <div className="card-contents">
                         <div {...provided.dragHandleProps} className="cardTitle">
-                            <div className="title">{props.column.title}</div>
+                            <div className="title">{props.column?.title}</div>
                             <MoreHorizIcon fontSize="small"/>
                         </div>
-                        <Droppable droppableId={props.column.id} type="card">
+                        <Droppable droppableId={props.column?.id} type="card">
                             {(provided, snapshot) => (
                                 <div className="cardList"
                                      ref={provided.innerRef}
                                      {...provided.droppableProps}
                                 >
-                                    {props.cards.map((card, index) => <Card
+                                    {props.cards?.map((card, index) => <Card
                                         key={card?.id} card={card} index={index}
                                         setDeleting={props.setDeleting}
                                         setEditSubmitting={props.setEditSubmitting}

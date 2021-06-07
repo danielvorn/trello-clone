@@ -125,15 +125,15 @@ const App = () => {
                      {...provided.droppableProps}
                      ref={provided.innerRef}>
                   {columnOrder.map((id, index) => {
-                    const [column] = columns.filter(x => x.id === id)
+                    const [column] = columns.filter(col => col?.id === id)
                     const myCards = column?.cardIds
                         .map(cardId => {
-                          const [card] = cards.filter(card => card.id === cardId)
+                          const [card] = cards.filter(card => card?.id === cardId)
                           return card
                         })
 
                     return <Column fetchCards={fetchCards} fetchColumns={fetchColumns}
-                                   setCardSubmitting={setCardSubmitting} key={column.id}
+                                   setCardSubmitting={setCardSubmitting} key={column?.id}
                                    column={column} cards={myCards} index={index} setDeleting={setDeleting}
                                    setEditSubmitting={setEditSubmitting} setMarkAsDone={setMarkAsDone}
                     />
