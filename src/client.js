@@ -22,6 +22,18 @@ export const getColumns = () =>
 export const getColumnOrder = () =>
     axios.get("/columnOrder").then(checkStatus)
 
+const pushColumnIntoOrder = (colId) =>
+    getColumnOrder().then(res => {
+        const columnOrder = [...res.data[0]["column"]]
+        columnOrder.push(colId)
+        setColumnOrder(columnOrder)
+    })
+
+export const createColumn = (title) =>
+    axios.post("/columns", {title: title, cardIds: []})
+        .then(checkStatus)
+        .then(res => pushColumnIntoOrder(res.data.id))
+
 export const setColumnOrder = (order) =>
     axios.patch("/columnOrder/order", {column: order}).then(checkStatus)
 

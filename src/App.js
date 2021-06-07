@@ -12,6 +12,7 @@ const App = () => {
   const [deleting, setDeleting] = useState(false)
   const [cardSubmitting, setCardSubmitting] = useState(false);
   const [editSubmitting, setEditSubmitting] = useState(false);
+  const [creatingColumn, setCreatingColumn] = useState(false);
   const [markAsDone, setMarkAsDone] = useState(false);
 
   const fetchCards = () => {
@@ -36,7 +37,11 @@ const App = () => {
     fetchCards()
     fetchColumnOrder()
     fetchColumns()
-  }, [deleting, cardSubmitting, editSubmitting, markAsDone]);
+  }, [deleting,
+    cardSubmitting,
+    editSubmitting,
+    markAsDone,
+    creatingColumn]);
 
   const onDragEnd = result => {
     const {destination, source, draggableId, type} = result;
@@ -56,7 +61,7 @@ const App = () => {
       const newColumnOrder = [...columnOrder]
       newColumnOrder.splice(source.index, 1);
       newColumnOrder.splice(destination.index, 0, draggableId);
-      client.setColumnOrder(newColumnOrder).catch(err => console.log(err))
+      client.setColumnOrder(newColumnOrder)
       setColumnOrder(newColumnOrder)
       return;
     }
@@ -74,7 +79,7 @@ const App = () => {
       let newColumn = [...columns]
       const index = newColumn.findIndex(x => x.id === start.id)
       newColumn[index].cardIds = newCardIds
-      client.pushCardMappingsToColumn(columns[index].id, newCardIds).catch(err => console.log(err))
+      client.pushCardMappingsToColumn(columns[index].id, newCardIds)
       setColumns(newColumn)
       return;
     }
@@ -106,13 +111,13 @@ const App = () => {
     setColumns(newColumn)
   }
 
-  if (cards.length === 0 || columnOrder.length === 0 || columns.length === 0)
+  if (cards?.length === 0 || columnOrder?.length === 0 || columns?.length === 0)
     return (<span>Loading...</span>);
 
   return (
 
       <DragDropContext onDragEnd={onDragEnd}>
-        <Nav/>
+        <Nav setCreatingColumn={setCreatingColumn}/>
         <div className="board">
           <Droppable droppableId="all-columns" direction="horizontal" type="column">
             {(provided) => (

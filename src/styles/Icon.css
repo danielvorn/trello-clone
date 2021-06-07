@@ -25,3 +25,21 @@ textarea {
     color: green;
     cursor: pointer;
 }
+
+.addColButton {
+    cursor: pointer;
+    display: flex;
+    border: none;
+    align-items: center;
+    border-radius: 5px;
+    margin: 8px;
+    padding: 4px 8px;
+    text-decoration: none;
+    user-select: none;
+    position: absolute;
+    right: 15px;
+}
+
+.addColButton:hover {
+    background-color: #c3c2c2;
+}
