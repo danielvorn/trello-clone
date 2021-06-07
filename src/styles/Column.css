@@ -1,0 +1,73 @@
+.column-container {
+    margin: 8px;
+    width: 272px;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex: 0 0 auto;
+    color: black;
+    font-weight: 700;
+    padding: 10px 8px;
+    position: relative;
+}
+
+.addCardSection {
+    display: flex;
+    align-items: center;
+}
+
+.cardList {
+    padding: 8px;
+    max-height: 90%;
+    overflow-y: scroll;
+}
+
+.cardTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9px;
+}
+
+.card-contents {
+    background-color: floralwhite;
+    background-image: linear-gradient(floralwhite, #c3c3c3);
+    border-radius: 3px;
+}
+.text-area-container {
+    padding: 0 8px 8px;
+}
+
+.text-area-container button {
+    cursor: pointer;
+    background-color: #0079bf;
+    border-radius: 2px;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    width: 85px;
+    height: 30px;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    resize: vertical;
+    outline: none;
+    padding: 8px 12px;
+    border: none;
+    margin-bottom: 3px;
+}
+
+.clear-icon {
+    margin-left: 4px;
+    cursor: pointer;
+    color: grey;
+}
+
+.clear-icon:hover {
+    color: #4d4d4d;
+}

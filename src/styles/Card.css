@@ -1,0 +1,28 @@
+.card-container {
+    padding: 12px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 14px;
+    margin: 0 0 4px;
+    background-color: #fff;
+    max-width: 300px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    max-height: 100%;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    padding: 0 2px;
+}
+
+.check-circle-icon {
+    color: green;
+    cursor: pointer;
+    margin-left: 8px;
+    justify-content: center;
+    display: flex;
+}

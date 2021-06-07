@@ -43,20 +43,36 @@
       "id": "8qKSDHV"
     },
     {
-      "title": "weghwehw4h4h",
-      "id": "A5bhyzp"
+      "title": "efwwwhwhe",
+      "id": "TOMUB4i",
+      "status": "DONE"
     },
     {
-      "title": "ewgweg",
-      "id": "kA9Rqn5"
+      "title": "NOPE",
+      "id": "IYTML97",
+      "status": "DONE"
     },
     {
-      "title": "ewhwwegwh",
-      "id": "2vIZOIL"
+      "title": "YEP",
+      "id": "SdpNLjt",
+      "status": "DONE"
     },
     {
-      "title": "ewgwhwhwehweh",
-      "id": "TOMUB4i"
+      "title": "fewgwgweg",
+      "id": "iDZlxWL"
+    },
+    {
+      "title": "ewgwgwg",
+      "id": "iCPjc7F"
+    },
+    {
+      "title": "ewgwgewhw",
+      "id": "33aG70B"
+    },
+    {
+      "title": "fewgwg",
+      "id": "Ci7W8c-",
+      "status": "DONE"
     }
   ],
   "columns": [
@@ -71,21 +87,25 @@
       "id": "column-2",
       "title": "In progress",
       "cardIds": [
-        "A5bhyzp",
-        "kA9Rqn5"
+        "Ci7W8c-",
+        "IYTML97",
+        "SdpNLjt"
       ]
     },
     {
       "id": "column-3",
       "title": "Review",
-      "cardIds": []
+      "cardIds": [
+        "iCPjc7F"
+      ]
     },
     {
       "id": "column-4",
       "title": "Completed",
       "cardIds": [
-        "2vIZOIL",
-        "TOMUB4i"
+        "iDZlxWL",
+        "TOMUB4i",
+        "33aG70B"
       ]
     }
   ]
