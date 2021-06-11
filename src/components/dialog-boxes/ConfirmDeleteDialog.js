@@ -8,15 +8,15 @@ import * as client from "../../client";
 import DeleteOutlineIcon from "@material-ui/icons/DeleteOutline";
 import "../../styles/Icon.css";
 
-export default function ConfirmDeleteDialog({cardId, colId, setDeleting}) {
+export default function ConfirmDeleteDialog({cardId, colId, deleteCardFromState}) {
     const [open, setOpen] = useState(false);
 
     const confirmDelete = async () => {
         const removeCardFromColumn = async () => {
             await client.deleteCard(colId, cardId)
+            await deleteCardFromState(colId, cardId)
         }
         await removeCardFromColumn()
-        setDeleting(false)
     }
 
     const handleClickOpen = () => {
@@ -29,7 +29,6 @@ export default function ConfirmDeleteDialog({cardId, colId, setDeleting}) {
 
     const handleSubmit = () => {
         setOpen(false);
-        setDeleting(true)
         confirmDelete().catch(err => console.log(err))
     }
 

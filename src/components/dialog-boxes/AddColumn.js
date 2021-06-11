@@ -1,34 +1,34 @@
-import React, {useState} from "react";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import * as client from "../../client";
-import "../../styles/Icon.css";
-import Button from "@material-ui/core/Button";
-import AddIcon from '@material-ui/icons/Add';
+import React, {useState} from "react"
+import Dialog from "@material-ui/core/Dialog"
+import DialogActions from "@material-ui/core/DialogActions"
+import DialogContent from "@material-ui/core/DialogContent"
+import DialogTitle from "@material-ui/core/DialogTitle"
+import * as client from "../../client"
+import "../../styles/Icon.css"
+import Button from "@material-ui/core/Button"
+import AddIcon from '@material-ui/icons/Add'
 
-export default function AddColumn({setCreatingColumn}) {
-    const [open, setOpen] = useState(false);
-    const [title, setTitle] = useState("");
+export default function AddColumn({createColumnState}) {
+    const [open, setOpen] = useState(false)
+    const [title, setTitle] = useState("")
 
     const createColumn = async () => {
         client.createColumn(title)
-            .then(res => {setCreatingColumn(creatingColumnState => !creatingColumnState)})
+            .then(res => createColumnState(title))
     }
 
     const handleClickOpen = () => {
-        setOpen(true);
-    };
+        setOpen(true)
+    }
 
     const handleClose = () => {
-        setOpen(false);
-    };
+        setOpen(false)
+    }
 
     const handleSubmit = () => {
-        setOpen(false);
+        setOpen(false)
         createColumn().catch(err => console.log(err))
-    };
+    }
 
     return (
         <div className="icon">
@@ -55,5 +55,5 @@ export default function AddColumn({setCreatingColumn}) {
                 </DialogActions>
             </Dialog>
         </div>
-    );
+    )
 }

@@ -1,20 +1,22 @@
 import React, {useEffect, useRef, useState} from "react"
 import {Draggable, Droppable} from "react-beautiful-dnd"
-import AddOutlinedIcon from "@material-ui/icons/AddOutlined";
-import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
-import ClearIcon from "@material-ui/icons/Clear";
-import * as client from "../client";
+import AddOutlinedIcon from "@material-ui/icons/AddOutlined"
+import ClearIcon from "@material-ui/icons/Clear"
+import * as client from "../client"
 import "../styles/Column.css"
 import Card from "./Card"
+import EditOutlinedIcon from "@material-ui/icons/EditOutlined"
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 
 function Column(props) {
-    const [show, setShow] = useState(true);
+    const [show, setShow] = useState(true)
     const [cardTitle, setCardTitle] = useState("")
-    const textInput = useRef(null);
+    const textInput = useRef(null)
 
     const addCard = async () => {
-        if(cardTitle === "") return
-        client.createCard(cardTitle, props.column.id).then(props.setCardSubmitting)
+        if (cardTitle === "") return
+        client.createCard(cardTitle, props.column.id)
+            .then(props.createCardState(cardTitle, props.column.id))
         setCardTitle("")
     }
 
@@ -30,6 +32,10 @@ function Column(props) {
                         <div {...provided.dragHandleProps} className="cardTitle">
                             <div className="title">{props.column?.title}</div>
                             <MoreHorizIcon fontSize="small"/>
+                            <EditOutlinedIcon
+                                style={{cursor: "pointer"}}
+                                onClick={() => {console.log("Clicked!!!")}}
+                            />
                         </div>
                         <Droppable droppableId={props.column?.id} type="card">
                             {(provided, snapshot) => (
@@ -38,12 +44,14 @@ function Column(props) {
                                      {...provided.droppableProps}
                                 >
                                     {props.cards?.map((card, index) => <Card
-                                        key={card?.id} card={card} index={index}
-                                        setDeleting={props.setDeleting}
-                                        setEditSubmitting={props.setEditSubmitting}
-                                        setMarkAsDone={props.setMarkAsDone}
+                                        card={card}
+                                        key={card?.id}
+                                        index={index}
+                                        deleteCardFromState={props.deleteCardFromState}
+                                        updateCardStateAfterEdit={props.updateCardStateAfterEdit}
                                         fetchCards={props.fetchCards}
                                         fetchColumns={props.fetchColumns}
+                                        markCardAsDoneState={props.markCardAsDoneState}
                                         columnId={props.column.id}/>)}
                                     {provided.placeholder}
                                 </div>

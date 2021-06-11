@@ -1,30 +1,31 @@
-import React, {useState} from "react";
-import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
-import DialogActions from "@material-ui/core/DialogActions";
-import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
-import DoneOutlineIcon from "@material-ui/icons/DoneOutline";
-import * as client from "../../client";
-import "../../styles/Icon.css";
+import React, {useState} from "react"
+import Button from "@material-ui/core/Button"
+import Dialog from "@material-ui/core/Dialog"
+import DialogActions from "@material-ui/core/DialogActions"
+import DialogContent from "@material-ui/core/DialogContent"
+import DialogContentText from "@material-ui/core/DialogContentText"
+import DoneOutlineIcon from "@material-ui/icons/DoneOutline"
+import * as client from "../../client"
+import "../../styles/Icon.css"
 
-export default function ConfirmDoneDialog({cardId, setMarkAsDone}) {
-    const [open, setOpen] = useState(false);
+export default function ConfirmDoneDialog({cardId, markCardAsDoneState}) {
+    const [open, setOpen] = useState(false)
 
     const markCardAsDone = async () => {
-        client.markCardAsDone(cardId).then(setMarkAsDone)
+        client.markCardAsDone(cardId)
+            .then(r => markCardAsDoneState(cardId))
     }
 
     const handleClickOpen = () => {
-        setOpen(true);
-    };
+        setOpen(true)
+    }
 
     const handleClose = () => {
-        setOpen(false);
-    };
+        setOpen(false)
+    }
 
     const handleSubmit = () => {
-        setOpen(false);
+        setOpen(false)
         markCardAsDone().catch(err => console.log(err))
     }
 
@@ -52,5 +53,5 @@ export default function ConfirmDoneDialog({cardId, setMarkAsDone}) {
                 </DialogActions>
             </Dialog>
         </div>
-    );
+    )
 }

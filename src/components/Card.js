@@ -1,10 +1,10 @@
 import React from "react"
 import "../styles/Card.css"
 import {Draggable} from "react-beautiful-dnd"
-import EditDialogForm from "./dialog-boxes/EditDialogForm";
-import ConfirmDoneDialog from "./dialog-boxes/ConfirmDoneDialog";
-import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import ConfirmDeleteDialog from "./dialog-boxes/ConfirmDeleteDialog";
+import EditDialogForm from "./dialog-boxes/EditDialogForm"
+import ConfirmDoneDialog from "./dialog-boxes/ConfirmDoneDialog"
+import CheckCircleIcon from "@material-ui/icons/CheckCircle"
+import ConfirmDeleteDialog from "./dialog-boxes/ConfirmDeleteDialog"
 
 function Card(props) {
     return (
@@ -20,10 +20,10 @@ function Card(props) {
                         <EditDialogForm
                             cardId={props.card?.id}
                             title={props.card?.title}
-                            setEditSubmitting={props.setEditSubmitting}
+                            updateCardStateAfterEdit={props.updateCardStateAfterEdit}
                         />
                         <ConfirmDeleteDialog
-                            setDeleting={props.setDeleting}
+                            deleteCardFromState={props.deleteCardFromState}
                             colId={props.columnId}
                             cardId={props.card?.id}
                         />
@@ -31,8 +31,8 @@ function Card(props) {
                             <CheckCircleIcon
                                 className="check-circle-icon"/> :
                             <ConfirmDoneDialog
-                                setMarkAsDone={props.setMarkAsDone}
                                 cardId={props.card?.id}
+                                markCardAsDoneState={props.markCardAsDoneState}
                             />
                         }
                     </div>

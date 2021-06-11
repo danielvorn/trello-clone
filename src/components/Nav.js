@@ -1,15 +1,15 @@
-import React from "react";
-import Logo from "../assets/trello-logo.gif";
+import React from "react"
+import Logo from "../assets/trello-logo.gif"
 import "../styles/Nav.css"
-import AddColumn from "./dialog-boxes/AddColumn";
+import AddColumn from "./dialog-boxes/AddColumn"
 
-function Nav({setCreatingColumn}) {
+function Nav({createColumnState}) {
     return (
         <div className="nav">
             <img className="headerLogo" src={Logo} alt="Logo" />
-            <AddColumn className="addColumnButton" setCreatingColumn={setCreatingColumn}/>
+            <AddColumn className="addColumnButton" createColumnState={createColumnState}/>
         </div>
-    );
+    )
 }
 
-export default Nav;
+export default Nav
