@@ -16,8 +16,8 @@ function Column(props) {
     const addCard = async () => {
         if (cardTitle === "") return
         client.createCard(cardTitle, props.column.id)
-            .then(props.createCardState(cardTitle, props.column.id))
-        setCardTitle("")
+            .then(r => props.setCreateCard((prevValue) => !prevValue))
+            setCardTitle("")
     }
 
     useEffect(() => {

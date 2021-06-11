@@ -9,6 +9,7 @@ const App = () => {
   const [cards, setCards] = useState([])
   const [columns, setColumns] = useState([])
   const [columnOrder, setColumnOrder] = useState([])
+  const [createCard, setCreateCard] = useState(false)
   const [createColumn, setCreateColumn] = useState(false)
 
   const deleteCardFromState = (colId, cardId) => {
@@ -45,19 +46,19 @@ const App = () => {
     setCards(cardCopy)
   }
 
-  const createCardState = (cardTitle, colId) => {
-    /** first create card **/
-    const cardsCopy = [...cards]
-    const uniqueId = '_' + Math.random().toString(36).substr(2, 9)
-    cardsCopy.push({id: uniqueId, title: cardTitle})
-    setCards(cardsCopy)
-
-    /** now add card to column **/
-    const columnsCopy = [...columns]
-    const foundIndex = columnsCopy.findIndex(col => col.id === colId)
-    columnsCopy[foundIndex].cardIds.push(uniqueId)
-    setColumns(columnsCopy)
-  }
+  // const createCardState = (cardTitle, colId) => {
+  //   /** first create card **/
+  //   const cardsCopy = [...cards]
+  //   const uniqueId = '_' + Math.random().toString(36).substr(2, 9)
+  //   cardsCopy.push({id: uniqueId, title: cardTitle})
+  //   setCards(cardsCopy)
+  //
+  //   /** now add card to column **/
+  //   const columnsCopy = [...columns]
+  //   const foundIndex = columnsCopy.findIndex(col => col.id === colId)
+  //   columnsCopy[foundIndex].cardIds.push(uniqueId)
+  //   setColumns(columnsCopy)
+  // }
 
   const markCardAsDoneState = (cardId) => {
     const cardsCopy = [...cards]
@@ -98,7 +99,7 @@ const App = () => {
     fetchCards()
     fetchColumns()
     fetchColumnOrder()
-  }, [createColumn])
+  }, [createColumn, createCard])
 
   const onDragEnd = result => {
     const {destination, source, draggableId, type} = result
@@ -168,7 +169,7 @@ const App = () => {
     setColumns(newColumn)
   }
 
-  if (cards?.length === 0 || columnOrder?.length === 0 || columns?.length === 0)
+  if (cards?.length === undefined || columnOrder?.length === undefined || columns?.length === undefined)
     return (<span>Loading...</span>)
 
   return (
@@ -190,7 +191,7 @@ const App = () => {
 
                     return <Column key={column?.id}
                                    updateCardStateAfterEdit={editCardState}
-                                   createCardState={createCardState}
+                                   setCreateCard={setCreateCard}
                                    column={column} cards={myCards} index={index}
                                    deleteCardFromState={deleteCardFromState}
                                    markCardAsDoneState={markCardAsDoneState}

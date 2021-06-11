@@ -12,70 +12,42 @@
   ],
   "cards": [
     {
-      "id": "card-1",
-      "title": "Talk an afternoon walk"
+      "title": "DDDD",
+      "id": "1"
     },
     {
-      "id": "card-2",
-      "title": "Attend Sideqik interview"
+      "title": "DEEE",
+      "id": "2"
     },
     {
-      "id": "card-3",
-      "title": "Go to the gym"
-    },
-    {
-      "id": "card-4",
-      "title": "Eat some Hot Cheetohs"
-    },
-    {
-      "id": "card-5",
-      "title": "Go hiking"
-    },
-    {
-      "id": "card-6",
-      "title": "Study algorithms"
-    },
-    {
-      "title": "Doing stuff",
-      "id": "OqAS-aw"
-    },
-    {
-      "title": "Doing more stuff",
-      "id": "eiB5B7M"
+      "title": "DDDD",
+      "id": "4AGcVz4"
     }
   ],
   "columns": [
     {
       "id": "column-1",
       "title": "Todo",
-      "cardIds": [
-        "card-1"
-      ]
+      "cardIds": []
     },
     {
       "id": "column-2",
       "title": "In progress",
-      "cardIds": [
-        "card-2",
-        "OqAS-aw",
-        "eiB5B7M"
-      ]
+      "cardIds": []
     },
     {
       "id": "column-3",
       "title": "Review",
       "cardIds": [
-        "card-3",
-        "card-4"
+        "4AGcVz4",
+        "2",
+        "1"
       ]
     },
     {
       "id": "column-4",
       "title": "Completed",
-      "cardIds": [
-        "card-5",
-        "card-6"
-      ]
+      "cardIds": []
     }
   ]
 }
