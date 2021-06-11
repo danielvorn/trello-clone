@@ -8,13 +8,13 @@ import "../../styles/Icon.css"
 import Button from "@material-ui/core/Button"
 import AddIcon from '@material-ui/icons/Add'
 
-export default function AddColumn({createColumnState}) {
+export default function AddColumn({setCreateColumn}) {
     const [open, setOpen] = useState(false)
     const [title, setTitle] = useState("")
 
     const createColumn = async () => {
         client.createColumn(title)
-            .then(res => createColumnState(title))
+            .then(r => setCreateColumn((prevCheck) => !prevCheck))
     }
 
     const handleClickOpen = () => {

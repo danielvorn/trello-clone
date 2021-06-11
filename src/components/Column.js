@@ -32,10 +32,10 @@ function Column(props) {
                         <div {...provided.dragHandleProps} className="cardTitle">
                             <div className="title">{props.column?.title}</div>
                             <MoreHorizIcon fontSize="small"/>
-                            <EditOutlinedIcon
-                                style={{cursor: "pointer"}}
-                                onClick={() => {console.log("Clicked!!!")}}
-                            />
+                            {/*<EditOutlinedIcon*/}
+                            {/*    style={{cursor: "pointer"}}*/}
+                            {/*    onClick={() => {console.log("Clicked!!!")}}*/}
+                            {/*/>*/}
                         </div>
                         <Droppable droppableId={props.column?.id} type="card">
                             {(provided, snapshot) => (

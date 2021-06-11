@@ -9,6 +9,7 @@ const App = () => {
   const [cards, setCards] = useState([])
   const [columns, setColumns] = useState([])
   const [columnOrder, setColumnOrder] = useState([])
+  const [createColumn, setCreateColumn] = useState(false)
 
   const deleteCardFromState = (colId, cardId) => {
     const columnsCopy = [...columns]
@@ -65,17 +66,17 @@ const App = () => {
     setCards(cardsCopy)
   }
 
-  const createColumnState = (colTitle) => {
-    const columnsCopy = [...columns]
-    const columnOrderCopy = [...columnOrder]
-    const uniqueId = '_' + Math.random().toString(36).substr(2, 9)
-    const column = {"id": uniqueId, "title": colTitle, "cardIds": []}
-
-    columnsCopy.push(column)
-    setColumns(columnsCopy)
-    columnOrderCopy.push(uniqueId)
-    setColumnOrder(columnOrderCopy)
-  }
+  // const createColumnState = (colTitle) => {
+  //   const columnsCopy = [...columns]
+  //   const columnOrderCopy = [...columnOrder]
+  //   const uniqueId = '_' + Math.random().toString(36).substr(2, 9)
+  //   const column = {"id": uniqueId, "title": colTitle, "cardIds": []}
+  //
+  //   columnsCopy.push(column)
+  //   setColumns(columnsCopy)
+  //   columnOrderCopy.push(uniqueId)
+  //   setColumnOrder(columnOrderCopy)
+  // }
 
   const fetchCards = () => {
     client.getCards()
@@ -97,7 +98,7 @@ const App = () => {
     fetchCards()
     fetchColumns()
     fetchColumnOrder()
-  }, [])
+  }, [createColumn])
 
   const onDragEnd = result => {
     const {destination, source, draggableId, type} = result
@@ -172,7 +173,7 @@ const App = () => {
 
   return (
       <DragDropContext onDragEnd={onDragEnd}>
-        <Nav createColumnState={createColumnState}/>
+        <Nav setCreateColumn={setCreateColumn}/>
         <div className="board">
           <Droppable droppableId="all-columns" direction="horizontal" type="column">
             {(provided) => (

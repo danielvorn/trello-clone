@@ -3,10 +3,10 @@
     {
       "id": "order",
       "column": [
-        "column-1",
         "column-2",
         "column-3",
-        "column-4"
+        "column-4",
+        "column-1"
       ]
     }
   ],
@@ -34,6 +34,14 @@
     {
       "id": "card-6",
       "title": "Study algorithms"
+    },
+    {
+      "title": "Doing stuff",
+      "id": "OqAS-aw"
+    },
+    {
+      "title": "Doing more stuff",
+      "id": "eiB5B7M"
     }
   ],
   "columns": [
@@ -48,7 +56,9 @@
       "id": "column-2",
       "title": "In progress",
       "cardIds": [
-        "card-2"
+        "card-2",
+        "OqAS-aw",
+        "eiB5B7M"
       ]
     },
     {
