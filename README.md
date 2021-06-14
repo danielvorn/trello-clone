@@ -5,8 +5,8 @@ This is a front-end Trello clone built in React that makes requests against a fa
 ## Getting Started
 
 1. Clone the project and install dependencies with `yarn install`
-2. Then run `yarn mock-api` to start a fake REST API on `localhost:3000` 
-3. Now run `yarn start` to start your front-end application on `localhost:8000`
+2. Run `yarn mock-api` to start a fake REST API on `localhost:3000` 
+3. Run `yarn start` to start your front-end application on `localhost:8000`
 
 ## Commands
 
